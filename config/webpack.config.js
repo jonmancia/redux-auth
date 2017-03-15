@@ -25,6 +25,11 @@ module.exports = {
         include: [ path.join(__dirname, "..", "client")],
         options: { cacheDirectory: true }
       },
+      {
+        test: /\.(jpe?p|png|gitf|svg)$/i,
+        loader: 'url-loader',
+        include: [ path.join(__dirname, "..", "client")]
+      },
       { 
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
         loader:"url-loader", 
